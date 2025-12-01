@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Combining Expression Transfer and Semantic Editing for 3D Face Images">
+  <meta name="keywords" content="Gaussian Splatting, 3DGS, FaceAnimation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D-LaSR</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">3D-LaSR</h1>
+              <h2 class="title is-2">3D-Aware Latent-Space Reenactment: Combining Expression Transfer and Semantic Editing</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://orcid.org/0009-0007-3331-622X">Paul Hinzer</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://florian-barthel.github.io/">Florian Barthel</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://iphome.hhi.de/hilsmann/index.htm">Anna Hilsmann</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.informatik.hu-berlin.de/de/forschung/gebiete/viscom/eisert">Peter Eisert</a><sup>1, 2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Fraunhofer HHI,</span>
+            <span class="author-block"><sup>2</sup>Humboldt University Berlin</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://dl.acm.org/doi/10.1145/3756863.3769708"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+        <figure class="media lg">
+            <img src="./static/images/teaser.webp"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        <figcaption>
+       With <span class="dnerf">3D-LaSR</span>, you can animate and edit subjects from just a short video clip of their face
+        </figcaption>
+      </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+              <p>
+                The latent space of Generative Adversarial Networks (GANs) forms a continuous manifold where each point corresponds to a realistic image. Traversing linear paths within this space yields smooth transitions in image appearance, preserving realism without abrupt changes. For example, interpolating between latent codes of a closed-mouth and an open-mouth subject produces a natural animation of mouth movement. Building on this property, we propose <span class="dnerf">3D-LaSR</span>, a novel method for reenacting 3D human heads using latent space paths, derived from a single monocular video. </p>
+              <p>
+              Our approach leverages GAN inversion to extract latent vectors from video frames, and supports expression transfer between identities by applying latent animation paths from one subject to another.
+                Consequently, our method outputs dynamic sequences of latent vectors. Unlike decoder-based techniques that produce fixed geometry, <span class="dnerf">3D-LaSR</span> can directly manipulate the scenes using established GAN editing techniques to modify attributes such as hairstyle, age, eyewear, or expression.</p>
+              <p>
+                The method uses a key frame inversion approach, where intermediate frames are synthesized through linear interpolation. This significantly reduces computational cost compared to methods that require per-frame inversion. We validate our approach through a comprehensive set of experiments, demonstrating high-quality video synthesis, effective expression transfer, and flexible editability. Finally, as we develop our method around state-of-the-art 3D Gaussian splatting GANs, our method is able to render in explicit 3D environments such as video engines or VR settings.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Example Results</h2>
+          <p>
+              With <span class="dnerf">3D-LaSR</span>, you are able to reenact facial expressions and edit arbitrary facial attributes. We demonstrate the results with videos from the <a href="https://github.com/NVlabs/ffhq-dataset">FFHQ dataset</a> and editing boundaries for age, sentiment and glasses.
+          </p>
+          <figure class="media">
+              <video  autoplay controls muted loop playsinline >
+            <source src="./static/videos/vid_007_teaser_2.mp4"
+                    type="video/mp4">
+          </video>
+          <figcaption>
+            From left to right: Original video, reenacted video, reenacted and younger, reenacted and with glasses
+          </figcaption>
+        </figure>
+          <figure class="media">
+          <video  autoplay controls muted loop playsinline >
+            <source src="./static/videos/vid_002_accum.mp4"
+                    type="video/mp4">
+          </video>
+          <figcaption>
+            From left to right: Original video, reenacted face, reeneacted face edited younger, edited younger and happier and finally younger, happier and from novel viewpoints
+          </figcaption>
+        </figure>
+          <figure class="media">
+          <video  autoplay controls muted loop playsinline >
+            <source src="./static/videos/vid_004_sentiment.mp4"
+                    type="video/mp4">
+          </video>
+          <figcaption>
+            From left to right: Original video, reenacted video, reenacted and happier
+          </figcaption>
+        </figure>
+          <figure class="media">
+          <video  autoplay controls muted loop playsinline >
+            <source src="./static/videos/vid_005_age.mp4"
+                    type="video/mp4">
+          </video>
+          <figcaption>
+            From left to right: Original video, reenacted video, reenacted and younger
+          </figcaption>
+        </figure>
+        </div>
+      </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <div class="content has-text-justified">
+          <p>The key technical challenge is that reenactment and editing require disentangling expression from identity in the GAN latent space. Without such disentanglement, expression transfer across identities leads to loss of realism or identity drift, and edits may unintentionally alter expressions. To address this, we introduce a joint inversion and fine-tuning pipeline that maps multiple face videos into a shared latent space and restructures it such that identity and expression become independent, transferable, and continuously modifiable components. This design enables us to transfer expressions between identities while applying semantic edits, all with only a short monocular video per person—capturable, for instance, with a mobile phone.</p>
+
+          <figure class="media lg">
+            <img src="./static/images/joint_tuning.webp"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          <figcaption>
+An illustration of the latent space after the joint tuning. The offsets are optimized such that the same offset results in a similar change of expression in both people.
+          </figcaption>
+        </figure>
+        </div>
+      </div>
+    </div>
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We want to point out the following works, without which <span class="dnerf">3D-LaSR</span> would not have been possible:
+          </p>
+          <ul>
+          <li>The <a href="https://fraunhoferhhi.github.io/cgs-gan/">CGS-GAN</a> Generator is a highly optimized 3DGS-based face generator which is stable in the 3D-space.
+          <li>With <a href="https://afruehstueck.github.io/vive3D/">VIVE3D</a>, Frühstück et. al. proposed a method for video based face editing. 
+          <li>We obtain editing directions using the <a href="https://genforce.github.io/interfacegan/">InterFaceGAN</a> method.
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{10.1145/3756863.3769708,
+author = {Hinzer, Paul and Barthel, Florian and Hilsmann, Anna and Eisert, Peter},
+title = {3D-Aware Latent-Space Reenactment: Combining Expression Transfer and Semantic Editing},
+year = {2025},
+isbn = {9798400721175},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3756863.3769708},
+doi = {10.1145/3756863.3769708},
+abstract = {The latent space of Generative Adversarial Networks (GANs) forms a continuous manifold where each point corresponds to a realistic image. Traversing linear paths within this space yields smooth transitions in image appearance, preserving realism without abrupt changes. For example, interpolating between latent codes of a closed-mouth and an open-mouth subject produces a natural animation of mouth movement. Building on this property, we propose 3D-LaSR, a novel method for reenacting 3D human heads using latent space paths, derived from a single monocular video. Our approach leverages GAN inversion to extract latent vectors from video frames, and supports expression transfer between identities by applying latent animation paths from one subject to another. Consequently, our method outputs dynamic sequences of latent vectors. Unlike decoder-based techniques that produce fixed geometry, 3D-LaSR can directly manipulate the scenes using established GAN editing techniques to modify attributes such as hairstyle, age, eyewear, or expression. The method uses a key frame inversion approach, where intermediate frames are synthesized through linear interpolation. This significantly reduces computational cost compared to methods that require per-frame inversion. We validate our approach through a comprehensive set of experiments, demonstrating high-quality video synthesis, effective expression transfer, and flexible editability. Finally, as we develop our method around state-of-the-art 3D Gaussian splatting GANs, our method is able to render in explicit 3D environments such as video engines or VR settings.},
+booktitle = {Proceedings of the 22nd ACM SIGGRAPH European Conference on Visual Media Production},
+articleno = {13},
+numpages = {12},
+location = {
+},
+series = {CVMP '25}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+        <div class="content">
+          <p>
+                This website was created using the template provided by <a href="https://nerfies.github.io/">Nerfies</a>.          </p>
+        </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
