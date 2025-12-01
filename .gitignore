@@ -1,0 +1,10 @@
+/models/
+/outputs/
+pyrightconfig.json
+*.pyc
+configs/config.py
+__pycache__/
+/external/VIVE3D/
+/external/cgsgan/
+/external/spectre/
+wandb/

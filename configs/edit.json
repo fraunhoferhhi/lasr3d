@@ -1,0 +1,8 @@
+{
+    "boundary_path": "./boundaries/",
+    "save_object_name": "animation",
+    "model_type": "CGSGANGenerator",
+    "not_tuned_ok": false,
+    "show_unedited": true,
+    "accumulative_edits": true
+}

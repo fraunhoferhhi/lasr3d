@@ -1,0 +1,64 @@
+
+{
+    "save_object_name": "model",
+    "model_type": "CGSGANGenerator",
+    "analyser_options": {
+        "analyse_video": {
+            "start_sec": 0,
+            "end_sec": 5,
+            "fps": 30
+        },
+        "analyse_keyframes": {
+            "selector_type": "equidistant",
+            "num_keyframes": 0.3
+        },
+        "analyse_person": {
+            "batch_size": 2,
+            "num_steps": 400,
+            "learning_rate": 1e-2,
+            "learn_pose": false,
+            "selection": "select",
+            "spectre_mode": "spectre",
+            "loss_weights": {
+                "spectre": 0.1,
+                "wdist": 0.1,
+                "pix": 0.25,
+                "face": 1.2,
+                "lpips": 1.0
+            }
+        },
+        "inversion": {
+            "batch_size": 1,
+            "learn_pose": false,
+            "loss_threshold": 0.25,
+            "num_steps": 50,
+            "learning_rate": 1e-2,
+            "spectre_mode": "spectre",
+            "loss_weights": {
+                "spectre": 0.1,
+                "wdist": 0.1,
+                "pix": 0.25,
+                "face": 1.5,
+                "lpips": 1.0
+            }
+        },
+        "tune_model": {
+            "num_steps": 5000,
+            "learning_rate": 0.001,
+            "batch_size": 2,
+            "res": 512,
+            "backwards_step_distance": 3,
+            "spectre_mode": "spectre",
+            "loss_weights": {
+                "l1": 1,
+                "lpips": 1,
+                "spectre": 0.1,
+                "w_offset_regularisation": 0.01,
+                "id": 0.1
+            }
+        },
+        "analyse_poses": {
+            "output_size": 512
+        }
+    }
+}
