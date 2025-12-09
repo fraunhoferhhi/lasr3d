@@ -1,8 +1,10 @@
 # LaSR-3D
 
-This repository is the implementation of the CVMP 2025 Paper "3D-Aware Latent-Space Reenactment: Combining Expression Transfer and Semantic Editing".
+This repository is the implementation of the Paper "3D-Aware Latent-Space Reenactment: Combining Expression Transfer and Semantic Editing".
 
 ![Teaser image](./example/teaser.png)
+
+<div align="center">CVMP Best Paper Award 2025! 🎉<b></b></div>
 
 ## Install
 

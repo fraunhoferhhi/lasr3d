@@ -18,13 +18,17 @@ body {
 }
 
 
-.teaser .hero-body {
+.hero-body {
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 1em !important;
 }
 
+
+
 .teaser {
+  padding-top: 0;
   font-family: 'Google Sans', sans-serif;
+  padding-bottom: 3rem;
 }
 
 
